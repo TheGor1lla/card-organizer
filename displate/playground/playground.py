@@ -9,8 +9,8 @@ playground = Blueprint('playground', __name__)
 def hello():
     displates = (
         Displate("yellow", "yellow.jpg"),
-        Displate("vivi", "vivi.jpg"),
-        Displate("bw", "bw.jpg"),
+        Displate("vivi", "vivi.jpg")
+        # Displate("bw", "bw.jpg"),
         # Displate("lovecraft", "lovecraft.jpg"),
         # Displate("lovecraft", "lovecraft.jpg"),
         # Displate("lovecraft", "lovecraft.jpg"),

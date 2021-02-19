@@ -4,52 +4,47 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Klickibunti</title>
-    <!--    <link rel="stylesheet" href="{{ url_for('static', filename='css/style2.css') }}">-->
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}"/>
-<!--    <style>-->
-<!--         .resizable {-->
-<!--            float:left;-->
-<!--            position:absolute;-->
-<!--            margin:10px;-->
-<!--            background: hotpink;-->
-<!--        }-->
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <style>
 
-<!--        .draggable {-->
-<!--            background: hotpink;-->
-<!--            float: left;-->
-<!--        }-->
+        .draggable {
+        background: hotpink;
+        position: absolute;}
 
-<!--        body {-->
-<!--          background-image: url('static/img/background.jpeg');-->
-<!--          background-repeat: no-repeat;-->
-<!--          background-attachment: fixed;-->
-<!--        }-->
-<!--    </style>-->
+                body {
+          background-image: url('static/img/background.jpeg');
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+        }
 
-    <script src="{{ url_for('static', filename='script.js') }}"></script>
-<!--    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>-->
-<!--    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>-->
-<!--    <script>-->
-<!--        $( function() {-->
-<!--            $( ".resizable" ).resizable({-->
-<!--                  aspectRatio: 5 / 7-->
-<!--            });-->
-<!--        } );-->
+    </style>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+  $( function() {
+    $( ".resizable" ).resizable({
+      aspectRatio: 5 / 7
+    });
+  } );
 
-<!--        $( function() {-->
-<!--            $( ".draggable" ).draggable();-->
-<!--        } );-->
+    $( function() {
+    $( ".draggable" ).draggable();
+  } );
 
-
-<!--    </script>-->
+    </script>
 </head>
 <body>
 
 {% for displate in displates %}
-<div class="cards">
-    <img src="{{url_for('static', filename='img/'+displate.image)}}" width='290' height='406' class="resizable "/>
+<div class="draggable">
+    <img class="resizable " src="{{url_for('static', filename='img/'+displate.image)}}" width='290' height='406'/>
 </div>
 {% endfor %}
+
+<!--<div class = "resizable">-->
+<!--    <p>ahh</p>-->
+<!--</div>-->
 
 </body>
 </html>
